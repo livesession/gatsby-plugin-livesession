@@ -15,13 +15,7 @@ const renderOptions = (keystrokes, rootHostname) => {
 
 exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   if (process.env.NODE_ENV === `production`) {
-    const {
-      trackID,
-      keystrokes = false,
-      off = false,
-      debugMode = false,
-      rootHostname = false,
-    } = pluginOptions;
+    const { trackID, keystrokes = false, rootHostname = false } = pluginOptions;
 
     return setPostBodyComponents([
       <script
@@ -45,8 +39,6 @@ exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
                   )} });`
                 : ``
             }
-            ${off ? "__ls('off');" : ``}
-            ${debugMode ? "__ls('debug', true);" : ``}
             __ls("newPageView");
             `,
         }}

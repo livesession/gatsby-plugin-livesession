@@ -28,26 +28,18 @@ plugins: [
 
 ## Options
 
-### `trackID`
+`trackID`
 
 This is a place for your Tracking ID, you can get it from your [LiveSession account](https://app.livesession.io/).
 Tracking code won't be genereated without it.
 
-### `keystrokes`
+`keystrokes`
 
 Enable global keystroke tracking, read more [here](https://livesession.io/help/how-to-record-keystrokes/)
 
-### `rootHostname`
+`rootHostname`
 
 Set this to the highest-level hostname to record session across different subdomains on your site. (e.g. .your-domain.com)
-
-### `off`
-
-Turn LiveSession script off.
-
-### `debugMode`
-
-Set debug logging mode.
 
 For more informations about configuration and methods go to [LiveSession Developers](https://developers.labs.livesession.io/)
 
