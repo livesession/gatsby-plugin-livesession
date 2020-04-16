@@ -19,8 +19,6 @@ plugins: [
       trackID: YOUR_LIVESESSION_TRACKID, // Required, string
       keystrokes: true || false, // Optional, default to false
       rootHostname: 'string', // Optional
-      off: true || false, // Optional, default to false
-      debugMode: true || false, // Optional, default to fasle
     },
   },
 ];
@@ -41,8 +39,6 @@ Enable global keystroke tracking, read more [here](https://livesession.io/help/h
 
 Set this to the highest-level hostname to record session across different subdomains on your site. (e.g. .your-domain.com)
 
-For more informations about configuration and methods go to [LiveSession Developers](https://developers.labs.livesession.io/)
-
 ## FAQ
 
 1. Where can i find a tracking ID?
@@ -51,5 +47,7 @@ For more informations about configuration and methods go to [LiveSession Develop
    - You'll see a TrackID on the right side above the tracking code
 2. How to check if my tracking script works?
    Simply add **\_\_ls_validation** query to string parameter in your web browser URL, for more informations check out [this article](https://livesession.io/help/how-to-check-if-my-tracking-script-works/)
+
+More informations about configuration and methods go to [LiveSession Developers page](https://developers.labs.livesession.io/)
 
 For support contact us at [hello@livesession.io](mailto:hello@livesession.io) or visit [https://www.livesession.io](https://www.livesession.io/)
