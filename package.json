@@ -1,0 +1,45 @@
+{
+  "name": "gatsby-plugin-livesession",
+  "version": "1.0.0",
+  "description": "Integrate LiveSession with Gatsby!",
+  "keywords": [
+    "gatsby",
+    "livesession",
+    "plugin livesession",
+    "ls"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir .",
+    "watch": "babel -w src --out-dir .",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "lint": "eslint --ext js ./ --cache",
+    "format": "prettier --write 'src/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livesession/gatsby-plugin-livesession.git"
+  },
+  "author": "Marcel Bednarz <m.bednarz@livesession.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/livesession/gatsby-plugin-livesession/issues"
+  },
+  "homepage": "https://github.com/livesession/gatsby-plugin-livesession#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "babel-preset-gatsby-package": "^0.3.1",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "prettier": "^2.0.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2"
+  },
+  "peerDependencies": {
+    "gatsby": ">2.0.0"
+  }
+}
