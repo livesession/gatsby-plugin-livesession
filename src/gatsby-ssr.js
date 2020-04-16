@@ -1,9 +1,28 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
+const renderOptions = (keystrokes, rootHostname) => {
+  if (keystrokes && rootHostname === false) {
+    return `keystrokes: true`;
+  }
+  if (rootHostname && keystrokes === false) {
+    return `rootHostname: '${rootHostname}'`;
+  }
+  if (rootHostname && keystrokes) {
+    return `keystrokes: true, rootHostname: '${rootHostname}'`;
+  }
+};
+
 exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   if (process.env.NODE_ENV === `production`) {
-    const { trackID } = pluginOptions;
+    const {
+      trackID,
+      keystrokes = false,
+      off = false,
+      debugMode = false,
+      rootHostname = false,
+    } = pluginOptions;
+
     return setPostBodyComponents([
       <script
         key={`gatsby-plugin-livesession`}
@@ -18,12 +37,21 @@ exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
                 var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(ls, s);
             }(window, document, 'script', ('https:' == window.location.protocol ? 'https://' : 'http://') + 'cdn.livesession.io/track.js');
             __ls("init", "${trackID}");
+            ${
+              keystrokes || rootHostname
+                ? `__ls('setOptions', { ${renderOptions(
+                    keystrokes,
+                    rootHostname
+                  )} });`
+                : ``
+            }
+            ${off ? "__ls('off');" : ``}
+            ${debugMode ? "__ls('debug', true);" : ``}
             __ls("newPageView");
             `,
         }}
       />,
     ]);
   }
-
   return null;
 };

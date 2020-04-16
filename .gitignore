@@ -1,3 +1,4 @@
 node_modules
 /gatsby-ssr.js
+/gatsby-node.js
 .eslintcache
