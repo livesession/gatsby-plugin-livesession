@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/livesession/gatsby-plugin-livesession.git"
   },
-  "author": "Marcel Bednarz <m.bednarz@livesession.io>",
+  "author": "LiveSession <hello@livesession.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/livesession/gatsby-plugin-livesession/issues"

@@ -3,7 +3,7 @@ import React from 'react';
 
 exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   if (process.env.NODE_ENV === `production`) {
-    const { id } = pluginOptions;
+    const { trackID } = pluginOptions;
     return setPostBodyComponents([
       <script
         key={`gatsby-plugin-livesession`}
@@ -17,7 +17,7 @@ exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
                 var ls = d.createElement(t); ls.async = true; ls.src = u;
                 var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(ls, s);
             }(window, document, 'script', ('https:' == window.location.protocol ? 'https://' : 'http://') + 'cdn.livesession.io/track.js');
-            __ls("init", "${id}");
+            __ls("init", "${trackID}");
             __ls("newPageView");
             `,
         }}
