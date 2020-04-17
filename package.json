@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-livesession",
+  "name": "@livesession/gatsby-plugin-livesession",
   "version": "1.0.0",
   "description": "Integrate LiveSession with Gatsby!",
   "keywords": [
