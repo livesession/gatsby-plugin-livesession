@@ -5,7 +5,7 @@ Plugin adds code only in production mode.
 Follow the instruction to configure it properly.
 
 1. Install
-   `npm i gatsby-plugin-livesession` or `yarn add gatsby-plugin-livesession`
+   `npm i @livesession/gatsby-plugin-livesession` or `yarn add @livesession/gatsby-plugin-livesession`
 
 2. Configure
 
@@ -14,7 +14,7 @@ Follow the instruction to configure it properly.
 
 plugins: [
   {
-    resolve: `gatsby-plugin-livesession`,
+    resolve: `@livesession/gatsby-plugin-livesession`,
     options: {
       trackID: YOUR_LIVESESSION_TRACKID, // Required, string
       keystrokes: true || false, // Optional, default to false
