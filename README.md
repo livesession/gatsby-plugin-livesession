@@ -18,7 +18,7 @@ plugins: [
     options: {
       trackID: YOUR_LIVESESSION_TRACKID, // Required, string
       keystrokes: true || false, // Optional, default to false
-      rootHostname: 'string', // Optional
+      rootHostname: '.example.com', // Optional
     },
   },
 ];
