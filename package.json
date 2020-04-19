@@ -4,6 +4,7 @@
   "description": "Integrate LiveSession with Gatsby!",
   "keywords": [
     "gatsby",
+    "gatsby-plugin",
     "livesession",
     "plugin livesession",
     "ls"
